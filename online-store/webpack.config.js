@@ -1,6 +1,7 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const EslingPlugin = require('eslint-webpack-plugin');
 
 const baseConfig = {
@@ -11,8 +12,12 @@ const baseConfig = {
             { test: /.ts$/i, use: 'ts-loader' },
             {
                 test: /.css$/i,
-                use: ['style-loader', 'css-loader'],
+                use: [MiniCssExtractPlugin.loader,'style-loader', 'css-loader'],
             },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+              }
         ],
     },
     resolve: {
@@ -23,6 +28,7 @@ const baseConfig = {
         path: path.resolve(__dirname, './dist'),
     },
     plugins: [
+        new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
         new EslingPlugin({ extensions: 'ts' }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'),
