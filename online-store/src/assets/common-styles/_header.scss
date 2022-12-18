@@ -1,15 +1,20 @@
+@import './vars';
+
 .header {
     padding-top: 25px;
+    padding-bottom: 15px;
     position: sticky;
     .container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         .logo {
             width: 140px;
+            height: 30px;
             background-image: url(../../../public/logo.svg);
-            background-size: contain;
             background-repeat: no-repeat;
+            margin-top: 8px;
         }
         .navsection {
             .list-bar {
@@ -18,15 +23,43 @@
                 display: flex;
                 .list-item {
                     list-style: none;
+                    &:hover {
+                        transform: scale(1.02);
+                        transition: all 0.2s;
+                    }
                     & a {
                         text-decoration: none;
-                        margin-right: 15px;
+                        margin-right: 75px;
+                        color: #000;
+                        &:hover {
+                            color: $green-hover;
+                        }
+                        &.is-active {
+                            color: $green-hover;
+                        }
                     }
                 }
             }
         }
         .cart-phone {
             display: flex;
+            align-items: center;
+            .phone {
+                text-decoration: none;
+                color: #000;
+                &:hover {
+                    transform: scale(1.02);
+                    transition: all 0.2s;
+                }
+            }
+            .cart-image {
+                width: 50px;
+                height: 30px;
+                background-image: url(../../../public/shopping-cart.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin-left: 85px;
+            }
         }
     }
 }
