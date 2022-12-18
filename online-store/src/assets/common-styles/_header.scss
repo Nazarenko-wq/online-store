@@ -1,0 +1,32 @@
+.header {
+    padding-top: 25px;
+    position: sticky;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .logo {
+            width: 140px;
+            background-image: url(../../../public/logo.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .navsection {
+            .list-bar {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                .list-item {
+                    list-style: none;
+                    & a {
+                        text-decoration: none;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+        .cart-phone {
+            display: flex;
+        }
+    }
+}
