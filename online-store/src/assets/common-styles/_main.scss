@@ -7,9 +7,12 @@
 body {
     margin: 0;
     background-color: $background-color;
+    color: #000;
+    scroll-behavior: smooth;
 }
 
 .container {
     max-width: 1110px;
     margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
 }
