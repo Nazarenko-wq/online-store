@@ -4,9 +4,176 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!--Connect local style -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Item</title>
 </head>
 <body>
+    <!--HEADER SECTION-->
+    <header class="header">
+        <div class="container">
+            <a href="./index.html" class="logo"></a>
+            <nav class="navsection">
+                <ul class="list-bar">
+                    <li class="list-item">
+                        <a class="is-active" href="">Главная</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="">Магазин</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="">О бренде</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="cart-phone">
+                <a href="tel:+375291234657" class="phone">+375291234567</a>
+                <a href="./cart_page/index.html" class="cart-image"></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="title">
+                <h2>Свитшот Sweet Shot</h2>
+                <div class="path">
+                    <span class="main-page"><a href="#">Главная</a></span>
+                    <span class="space">-></span>
+                    <span class="kinds"><a href="#">Свитшоты</a></span>
+                    <span class="space">-></span>
+                    <span class="current-item active"><a href="#">Свитшот Sweet Shot</a></span>
+
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="item-detailes">
+                    <div class="item-img"></div>
+                    <div class="item-discriptions">
+                        <div class="price">
+                            <p>$311</p>
+                        </div>
+                        <div class="sizes-block">
+                            <h3 class="size-title">
+                                Выберете размер
+                            </h3>
+                            <div class="sizes">
+                                <div class="size">S</div>
+                                <div class="size active-size">M</div>
+                                <div class="size">L</div>
+                                <div class="size">XL</div>
+                                <div class="size">XXL</div>
+                            </div>
+                        </div>
+                        <div class="collor-block">
+                            <h3 class="collor-title">
+                                Выберете цвет
+                            </h3>
+                            <div class="collors">
+                                <div class="color color1"></div>
+                                <div class="color color2 active-color"></div>
+                                <div class="color color3"></div>
+                                <div class="color color4"></div>
+                            </div>
+                        </div>
+                        <div class="addit-block">
+                            <div class="quantity">1</div>
+                            <button class="add-btn">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="related-products">
+                    <h3 class="frame-title">
+                        Связанные товары
+                    </h3>
+                    <div class="products">
+                        <div class="card">
+                            <div class="card-img item1"></div>
+                            <div class="card-discription">
+                                <h4>Футболка USA</h4>
+                                <div class="card-price">
+                                    $129
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-img item2"></div>
+                            <div class="card-discription">
+                                <h4>Купальник Glow</h4>
+                                <div class="card-price">
+                                    $129
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="upper_block">
+                <a href="./index.html" class="logo"></a>
+                <nav class="navsection">
+                    <ul class="list-bar">
+                        <li class="list-item">
+                            <a class="is-active" href="">Главная</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="">Магазин</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="">О бренде</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="cart-phone">
+                    <a href="tel:+375291234567" class="phone">+375291234567</a>
+                    <a href="mailto:example@email.com" class="e-mail">example@email.com</a>
+                </div>
+            </div>
+            <div class="down_block">
+                <div class="wrapper-left">
+                    <div class="left-side">
+                        <p>&copy;Все Права защищены</p>
+                        <p>Политика конфиденциальности</p>
+                        <p>Публичная оферта</p>
+                    </div>
+                    <div class="right-side">
+                        <ul class="footer-list">
+                            <li class="list-item__footer">Пальто</li>
+                            <li class="list-item__footer">Свитшоты</li>
+                            <li class="list-item__footer">Кардиганы</li>
+                            <li class="list-item__footer">Толстовки</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrapper-right">
+                    <div class="social-networks">
+                        <a href="https://www.instagram.com
+                        " class="instagram"></a>
+                        <a href="https://www.facebook.com
+                        " class="facebook"></a>
+                        <a href="https://twitter.com" class="twitter"></a>
+                    </div>
+                    <div class="payment">
+                        <div class="visa"></div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./index.ts"></script>
 </body>
 </html>
