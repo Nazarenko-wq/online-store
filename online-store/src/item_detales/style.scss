@@ -23,6 +23,7 @@
     max-width: 1600px;
     width: 100%;
     display: flex;
+    padding: 0 20px;
 
     .container {
         .title {
@@ -257,6 +258,90 @@
                                 font-size: 15px;
                                 line-height: 140%;
                                 color: #998E78;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 769px) {
+            .title {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    font-size: 32px;
+                    margin: 30px 0 29px 0;
+                }
+
+                .path {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .main-content {
+                .item-detailes {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+
+                    .item-img {
+                        max-width: 300px;
+                        min-height: 430px;
+                    }
+
+                    .item-discriptions {
+                        align-items: center;
+
+                        .price {
+                            p {
+                                margin: 0;
+                            }
+                        }
+
+                        .collor-block {
+                            .collors {
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .addit-block {
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                    }
+                }
+
+                .related-products {
+                    margin: 10px 0 10px 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .frame-title {
+                        margin: 40px 0 20px 0;
+                        font-size: 20px;
+                    }
+
+                    .products {
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 20px;
+
+                        .card {
+                            max-width: 300px;
+                            min-height: 495px;
+                            .card-img {
+                                max-width: 300px;
+                                min-height: 430px;
+                            }
+
+                            .card-discription {
+                                h4 {
+                                    margin: 7px 0 7px 0;
+                                }
                             }
                         }
                     }
