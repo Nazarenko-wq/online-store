@@ -4,6 +4,9 @@
     padding-top: 25px;
     padding-bottom: 15px;
     position: sticky;
+    top: 0;
+    z-index: 5;
+    background: $background-color;
     .container {
         display: flex;
         flex-direction: row;
