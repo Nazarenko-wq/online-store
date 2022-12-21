@@ -1,14 +1,4 @@
-@import '../assets/common-styles/common.scss';
-
-%text {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 110%;
-    letter-spacing: 0.02em;
-    color: #000000;
-}  
+@import '../assets/common-styles/common.scss'; 
 
 %active-size {
     background-color: #000000;
@@ -26,35 +16,6 @@
     padding: 0 20px;
 
     .container {
-        .title {
-            max-width: 560px;
-            width: 100%;
-
-            h2 {
-                @extend %text;
-                font-size: 55px;
-                margin: 94px 0 29px 0;
-            }
-
-            .path {
-                margin-bottom: 103px;
-                span {
-                    margin-right: 10px;
-                    a {
-                        @extend %text;
-                        font-size: 17px;
-
-                        text-decoration: none;
-                    }
-                }
-
-                .active {
-                    a {
-                        color: #808080;
-                    }
-                }
-            }
-        }
 
         .main-content {
             max-width: 1110px;

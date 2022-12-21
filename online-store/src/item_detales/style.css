@@ -214,14 +214,36 @@ body {
   background-repeat: no-repeat;
 }
 
-.main .container .main-content .related-products .products .card .card-discription .card-price, .main .container .main-content .related-products .products .card .card-discription h4, .main .container .main-content .related-products .frame-title, .main .container .main-content .item-detailes .item-discriptions .addit-block .add-btn, .main .container .main-content .item-detailes .item-discriptions .addit-block .quantity, .main .container .main-content .item-detailes .item-discriptions .collor-block .collor-title, .main .container .main-content .item-detailes .item-discriptions .sizes-block .size-title, .main .container .main-content .item-detailes .item-discriptions .price p, .main .container .title .path span a, .main .container .title h2 {
+.main .container .main-content .related-products .products .card .card-discription .card-price, .main .container .main-content .related-products .products .card .card-discription h4, .main .container .main-content .related-products .frame-title, .main .container .main-content .item-detailes .item-discriptions .addit-block .add-btn, .main .container .main-content .item-detailes .item-discriptions .addit-block .quantity, .main .container .main-content .item-detailes .item-discriptions .collor-block .collor-title, .main .container .main-content .item-detailes .item-discriptions .sizes-block .size-title, .main .container .main-content .item-detailes .item-discriptions .price p, .title .path span a, .title h2 {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
-  line-height: 110%;
+  font-size: 20px;
+  line-height: 140%;
   letter-spacing: 0.02em;
   color: #000000;
+}
+
+.title {
+  max-width: 560px;
+  width: 100%;
+}
+.title h2 {
+  font-size: 55px;
+  margin: 94px 0 29px 0;
+}
+.title .path {
+  margin-bottom: 103px;
+}
+.title .path span {
+  margin-right: 10px;
+}
+.title .path span a {
+  font-size: 17px;
+  text-decoration: none;
+}
+.title .path .active a {
+  color: #808080;
 }
 
 .main .container .main-content .item-detailes .item-discriptions .sizes-block .sizes .active-size {
@@ -238,27 +260,6 @@ body {
   width: 100%;
   display: flex;
   padding: 0 20px;
-}
-.main .container .title {
-  max-width: 560px;
-  width: 100%;
-}
-.main .container .title h2 {
-  font-size: 55px;
-  margin: 94px 0 29px 0;
-}
-.main .container .title .path {
-  margin-bottom: 103px;
-}
-.main .container .title .path span {
-  margin-right: 10px;
-}
-.main .container .title .path span a {
-  font-size: 17px;
-  text-decoration: none;
-}
-.main .container .title .path .active a {
-  color: #808080;
 }
 .main .container .main-content {
   max-width: 1110px;
