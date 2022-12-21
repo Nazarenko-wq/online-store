@@ -1,15 +1,5 @@
 @import '../assets/common-styles/common.scss';
 
-%text {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 140%;
-    letter-spacing: 0.02em;
-    color: #000000;
-}
-
 .main {
     margin: 0 auto;
     max-width: 1600px;
@@ -17,35 +7,6 @@
     padding: 0 20px 50px;
 
     .container {
-        .title {
-            max-width: 560px;
-            width: 100%;
-
-            h2 {
-                @extend %text;
-                font-size: 55px;
-                margin: 94px 0 29px 0;
-            }
-
-            .path {
-                margin-bottom: 103px;
-                span {
-                    margin-right: 10px;
-                    a {
-                        @extend %text;
-                        font-size: 17px;
-
-                        text-decoration: none;
-                    }
-                }
-
-                .active {
-                    a {
-                        color: #808080;
-                    }
-                }
-            }
-        }
 
         .cart-content {
             @extend %text;
@@ -141,26 +102,26 @@
 
                     .total-btn {
                         display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            justify-content: center;
-                            gap: 10px;
-                            width: 236px;
-                            height: 68px;
-                            background-color: #6E9C9F;
-                            border: none;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        width: 236px;
+                        height: 68px;
+                        background-color: #6E9C9F;
+                        border: none;
 
-                            // text button
-                            @extend %text;
-                            font-size: 17px;
-                            color: #ffffff;
-                            line-height: 140%;
-                            transition: all 0.5s;
+                        // text button
+                        @extend %text;
+                        font-size: 17px;
+                        color: #ffffff;
+                        line-height: 140%;
+                        transition: all 0.5s;
 
-                            &:hover {
-                                cursor: pointer;
-                                background-color: #509498;
-                            }
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #509498;
+                        }
                     }
                 }
             }

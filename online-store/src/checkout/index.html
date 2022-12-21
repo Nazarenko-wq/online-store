@@ -4,9 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!--Connect local style -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Checkout</title>
 </head>
 <body>
+    <!--HEADER SECTION-->
+    <header class="header">
+        <div class="container">
+            <a href="./index.html" class="logo"></a>
+            <nav class="navsection">
+                <ul class="list-bar">
+                    <li class="list-item">
+                        <a class="is-active" href="">Главная</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="">Магазин</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="">О бренде</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="cart-phone">
+                <a href="tel:+375291234657" class="phone">+375291234567</a>
+                <a href="./cart_page/index.html" class="cart-image"></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="title">
+                <h2>Оформление заказа</h2>
+                <div class="path">
+                    <span class="main-page"><a href="#">Главная</a></span>
+                    <span class="space">-></span>
+                    <span class="current-item active"><a href="#">Оформление заказа</a></span>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="forms-block">
+                    <div class="user-data">
+                        <h3>Данные покупателя</h3>
+                        <form action="#">
+                            <input type="text" name="name" id="user-name" placeholder="Имя">
+                            <input type="email" name="email" id="user-email" placeholder="E-mail">
+                            <input type="tel" name="phone" id="user-phone" placeholder="Телефон">
+                        </form>
+                    </div>
+                    <div class="user-detalies">
+                        <h3>Адрес получателя</h3>
+                        <form action="#">
+                            <input type="text" name="country" id="user-country" placeholder="Страна">
+                            <input type="text" name="city" id="user-city" placeholder="Город">
+                            <input type="text" name="street" id="user-street" placeholder="Улица">
+                            <input type="text" name="home" id="user-home" placeholder="Дом">
+                            <input type="text" name="flat" id="user-flat" placeholder="Квартира">
+                        </form>
+                    </div>
+                    <div class="comments">
+                        <h3>Комментарии</h3>
+                        <form action="#">
+                            <textarea name="text" id="comment" cols="30" rows="10" placeholder="Оставьте свой комментарий"></textarea>
+                        </form>
+                    </div>
+                </div>
+                <div class="right-block">
+                    <div class="order-details-block">
+                        <h3>Ваш заказ</h3>
+                        <div class="order-details">
+                            <div>Товар</div>
+                            <div>Всего</div>
+                            <div>Вутболка USA</div>
+                            <div>$129</div>
+                            <div>Подытог</div>
+                            <div>$129</div>
+                        </div>
+                        <div class="total">
+                            Итого: <span class="total-res">$129</span>
+                        </div>
+                    </div>
+                    <div class="payment-method">
+                        <h3>Способ оплаты</h3>
+                        <form action="#">
+                            <input type="checkbox" class="custom-checkbox" name="pay" id="cash">
+                            <label for="cash">Оплата наличными</label>
+                        </form>
+                        <button class="total-btn">Разместить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="upper_block">
+                <a href="./index.html" class="logo"></a>
+                <nav class="navsection">
+                    <ul class="list-bar">
+                        <li class="list-item">
+                            <a class="is-active" href="">Главная</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="">Магазин</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="">О бренде</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="cart-phone">
+                    <a href="tel:+375291234567" class="phone">+375291234567</a>
+                    <a href="mailto:example@email.com" class="e-mail">example@email.com</a>
+                </div>
+            </div>
+            <div class="down_block">
+                <div class="wrapper-left">
+                    <div class="left-side">
+                        <p>&copy;Все Права защищены</p>
+                        <p>Политика конфиденциальности</p>
+                        <p>Публичная оферта</p>
+                    </div>
+                    <div class="right-side">
+                        <ul class="footer-list">
+                            <li class="list-item__footer">Пальто</li>
+                            <li class="list-item__footer">Свитшоты</li>
+                            <li class="list-item__footer">Кардиганы</li>
+                            <li class="list-item__footer">Толстовки</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrapper-right">
+                    <div class="social-networks">
+                        <a href="https://www.instagram.com
+                        " class="instagram"></a>
+                        <a href="https://www.facebook.com
+                        " class="facebook"></a>
+                        <a href="https://twitter.com" class="twitter"></a>
+                    </div>
+                    <div class="payment">
+                        <div class="visa"></div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./index.ts"></script>
 </body>
 </html>

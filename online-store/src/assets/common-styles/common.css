@@ -212,4 +212,36 @@ body {
   background-image: url(../../../public/visa-mastercard.png);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.title .path span a, .title h2 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.title {
+  max-width: 560px;
+  width: 100%;
+}
+.title h2 {
+  font-size: 55px;
+  margin: 94px 0 29px 0;
+}
+.title .path {
+  margin-bottom: 103px;
+}
+.title .path span {
+  margin-right: 10px;
+}
+.title .path span a {
+  font-size: 17px;
+  text-decoration: none;
+}
+.title .path .active a {
+  color: #808080;
 }/*# sourceMappingURL=common.css.map */
