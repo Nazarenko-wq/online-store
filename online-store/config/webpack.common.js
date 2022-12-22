@@ -42,12 +42,6 @@ module.exports = {
       template: paths.src + '/index.html', // template file
       filename: 'index.html', // output file
     }),
-    new HtmlWebpackPlugin({
-      title: 'cart',
-      favicon: paths.src + '/assets/images/favicon.png',
-      template: paths.src + '/cart_page/index.html', // template file
-      filename: 'cart.html', // output file
-    }),
   ],
 
   // Determine how modules within the project are treated

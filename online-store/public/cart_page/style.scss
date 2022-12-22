@@ -158,6 +158,20 @@
                     }
                 }
             }
+
+            .order-block {
+                .order-wriper {
+                    align-items: center;
+
+                    .place-order-block {
+                        flex-direction: column;
+
+                        .total {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

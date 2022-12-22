@@ -573,4 +573,13 @@ body {
   .main .container .cart-content .td .product {
     flex-direction: column;
   }
+  .main .container .order-block .order-wriper {
+    align-items: center;
+  }
+  .main .container .order-block .order-wriper .place-order-block {
+    flex-direction: column;
+  }
+  .main .container .order-block .order-wriper .place-order-block .total {
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
