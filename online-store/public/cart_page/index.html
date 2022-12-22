@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
     
     <!--Connect local style -->
-    <link rel="stylesheet" href="style.css">
-    
-    <title>Checkout</title>
+    <link href="./style.css" rel="stylesheet">
+
+    <title>Cart</title>
 </head>
 <body>
-    <!--HEADER SECTION-->
-    <header class="header">
+     <!--HEADER SECTION-->
+     <header class="header">
         <div class="container">
             <a href="./index.html" class="logo"></a>
             <nav class="navsection">
                 <ul class="list-bar">
                     <li class="list-item">
-                        <a class="is-active" href="">Главная</a>
+                        <a class="is-active" href="../../index.html">Главная</a>
                     </li>
                     <li class="list-item">
                         <a href="">Магазин</a>
@@ -43,65 +43,51 @@
     <main class="main">
         <div class="container">
             <div class="title">
-                <h2>Оформление заказа</h2>
+                <h2>Корзина</h2>
                 <div class="path">
-                    <span class="main-page"><a href="#">Главная</a></span>
+                    <span class="main-page"><a href="../../index.html">Главная</a></span>
                     <span class="space">-></span>
-                    <span class="current-item active"><a href="#">Оформление заказа</a></span>
+                    <span class="current-item active"><a href="#">Корзина</a></span>
                 </div>
             </div>
-            <div class="main-content">
-                <div class="forms-block">
-                    <div class="user-data">
-                        <h3>Данные покупателя</h3>
-                        <form action="#">
-                            <input type="text" name="name" id="user-name" placeholder="Имя">
-                            <input type="email" name="email" id="user-email" placeholder="E-mail">
-                            <input type="tel" name="phone" id="user-phone" placeholder="Телефон">
-                        </form>
-                    </div>
-                    <div class="user-detalies">
-                        <h3>Адрес получателя</h3>
-                        <form action="#">
-                            <input type="text" name="country" id="user-country" placeholder="Страна">
-                            <input type="text" name="city" id="user-city" placeholder="Город">
-                            <input type="text" name="street" id="user-street" placeholder="Улица">
-                            <input type="text" name="home" id="user-home" placeholder="Дом">
-                            <input type="text" name="flat" id="user-flat" placeholder="Квартира">
-                        </form>
-                    </div>
-                    <div class="comments">
-                        <h3>Комментарии</h3>
-                        <form action="#">
-                            <textarea name="text" id="comment" cols="30" rows="10" placeholder="Оставьте свой комментарий"></textarea>
-                        </form>
-                    </div>
+            <div class="cart-content">
+                <div class="thead">
+                    <div class="content-header under-line">Товар</div>
+                    <div class="items under-line">Цена</div>
+                    <div class="under-line">Кол-во</div>
+                    <div class="under-line">Всего</div>
                 </div>
-                <div class="right-block">
-                    <div class="order-details-block">
-                        <h3>Ваш заказ</h3>
-                        <div class="order-details">
-                            <div>Товар</div>
-                            <div>Всего</div>
-                            <div>Вутболка USA</div>
-                            <div>$129</div>
-                            <div>Подытог</div>
-                            <div>$129</div>
+                <div class="td">
+                    <div class="product">
+                        <img class="close-icon" src="../../public/close_icon.svg" alt="close">
+                        <div class="product-img">
+                            <img src="../../public/card_item2.jpg" alt="image">
                         </div>
+                        <div class="discription">
+                            Футболка USA
+                        </div>
+                    </div>
+                    <div class="price">$129</div>
+                    <div class="quantity">
+                        <div class="wrap-quantity">1</div>
+                    </div>
+                    <div class="result">$129</div>
+                </div>
+            </div>
+            <div class="order-block">
+                <div class="order-wriper">
+                    <div class="order-title">Подытог: <span class="res">$129</span></div>
+                    <div class="place-order-block">
                         <div class="total">
                             Итого: <span class="total-res">$129</span>
                         </div>
-                    </div>
-                    <div class="payment-method">
-                        <h3>Способ оплаты</h3>
-                        <form action="#">
-                            <input type="checkbox" class="custom-checkbox" name="pay" id="cash">
-                            <label for="cash">Оплата наличными</label>
-                        </form>
-                        <button class="total-btn">Разместить заказ</button>
+                        <a href="../checkout/index.html">
+                            <button class="total-btn">Оформить заказ</button>
+                        </a>
                     </div>
                 </div>
             </div>
+
         </div>
     </main>
     
@@ -160,22 +146,6 @@
             </div>
         </div>
     </footer>
-    <div class="popup-container">
-        <div class="popup-body">
-            <div class="content-block">
-                <div class="content">
-                    <img src="../../public/mark.png" alt="mark">
-                    <div class="text">
-                        <h3>Заказ успешно оформлен</h3>
-                        <p>Мы свяжемся с вами в ближайшее время</p>
-                    </div>
-                </div>
-                <a href="#">
-                    <button class="success-btn">Перейти на главную</button>
-                </a>
-            </div>
-        </div>
-    </div>
 
     <script src="./index.ts"></script>
 </body>
