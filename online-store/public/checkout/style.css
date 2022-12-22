@@ -436,7 +436,7 @@ body {
   color: #000000;
 }
 
-.main .container .main-content .right-block .payment-method .total-btn, .main .container .main-content .right-block .payment-method form label, .main .container .main-content .right-block .payment-method h3, .main .container .main-content .right-block .order-details-block .total, .main .container .main-content .right-block .order-details-block .order-details, .main .container .main-content .right-block .order-details-block h3, .main .container .main-content .forms-block .comments h3, .main .container .main-content .forms-block, .main .container .main-content .forms-block .user-detalies form input::placeholder, .main .container .main-content .forms-block .user-data form input::placeholder, .main .container .main-content .forms-block .user-detalies h3, .main .container .main-content .forms-block .user-data h3, .title .path span a, .title h2 {
+.popup-container .popup-body .content-block a button, .popup-container .popup-body .content-block .content .text p, .popup-container .popup-body .content-block .content .text h3, .main .container .main-content .right-block .payment-method .total-btn, .main .container .main-content .right-block .payment-method form label, .main .container .main-content .right-block .payment-method h3, .main .container .main-content .right-block .order-details-block .total, .main .container .main-content .right-block .order-details-block .order-details, .main .container .main-content .right-block .order-details-block h3, .main .container .main-content .forms-block .comments h3, .main .container .main-content .forms-block, .main .container .main-content .forms-block .user-detalies form input::placeholder, .main .container .main-content .forms-block .user-data form input::placeholder, .main .container .main-content .forms-block .user-detalies h3, .main .container .main-content .forms-block .user-data h3, .title .path span a, .title h2 {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
@@ -639,5 +639,68 @@ body {
   .main .container .main-content {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+.popup-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(110, 156, 159, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.popup-container .popup-body {
+  max-width: 1000px;
+  width: 100%;
+  min-height: 500px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.popup-container .popup-body .content-block {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.popup-container .popup-body .content-block .content {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  gap: 30px;
+}
+.popup-container .popup-body .content-block .content img {
+  width: 72px;
+  height: 84px;
+}
+.popup-container .popup-body .content-block .content .text h3 {
+  font-size: 25px;
+}
+.popup-container .popup-body .content-block a button {
+  width: 272px;
+  height: 68px;
+  border: 1px solid #6E9C9F;
+  font-size: 17px;
+  color: #6E9C9F;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+.popup-container .popup-body .content-block a button:hover {
+  cursor: pointer;
+  background-color: rgb(110, 156, 159);
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .popup-container .popup-body .content-block {
+    flex-direction: column;
+  }
+  .popup-container .popup-body .content-block a {
+    margin-top: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
