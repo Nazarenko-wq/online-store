@@ -15,4 +15,28 @@ body {
     max-width: 1110px;
     margin: 0 auto;
     font-family: 'Raleway', sans-serif;
+
+    @media screen and (max-width: 1250px) {
+        max-width: 880px;
+    }
+    @media screen and (max-width: 999px) {
+        max-width: 630px;
+    }
+    @media screen and (max-width: 599px) {
+        max-width: 500px;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.4);
+    &.is-active {
+        display: block;
+    }
 }
