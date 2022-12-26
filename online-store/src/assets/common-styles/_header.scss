@@ -185,6 +185,10 @@
             background-image: url(../../../public/burger.png);
             background-repeat: no-repeat;
             background-size: contain;
+            display: none;
+            @media screen and (max-width: 999px) {
+                display: block;
+            }
         }
     }
 }
