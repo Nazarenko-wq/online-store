@@ -38,11 +38,120 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 5;
+  z-index: 6;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .overlay.is-active {
   display: block;
+}
+
+.burger-menu {
+  max-width: 650px;
+  width: 100%;
+  height: 600px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: -651px;
+  transition: all 0.5s;
+  z-index: 7;
+}
+.burger-menu.is-active {
+  left: 0;
+}
+.burger-menu .burger-logo-wrapper {
+  width: 140px;
+  height: 30px;
+}
+.burger-menu .burger-logo-wrapper .burger-logo {
+  display: block;
+  width: 140px;
+  height: 30px;
+  background-image: url(../../../public/logo-burger.svg);
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  margin-left: 35px;
+}
+.burger-menu .close-btn {
+  background-image: url(../../../public/close-btn.svg);
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 20;
+}
+.burger-menu .burger-nav {
+  display: flex;
+  margin-top: 15px;
+}
+.burger-menu .burger-nav .burger-item {
+  list-style: none;
+  margin-bottom: 25px;
+}
+.burger-menu .burger-nav .burger-item a {
+  color: #FFF;
+  text-decoration: none;
+}
+.burger-menu .burger-nav .burger-item a.is-active {
+  color: #6E9C9F;
+}
+.burger-menu .burger-colored-overlay .burger-girl-main {
+  position: absolute;
+  top: 120px;
+  left: 250px;
+  z-index: 2;
+  width: 300px;
+  height: 400px;
+  background-image: url(../../../public/main-hero1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 599px) {
+  .burger-menu .burger-colored-overlay .burger-girl-main {
+    width: 200px;
+    height: 200px;
+    left: 40px;
+    top: 270px;
+  }
+}
+.burger-menu .burger-colored-overlay .burger-girl-middle {
+  position: absolute;
+  top: 181px;
+  right: 36px;
+  z-index: 3;
+  width: 150px;
+  height: 150px;
+  background-image: url(../../../public/main-hero3.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 599px) {
+  .burger-menu .burger-colored-overlay .burger-girl-middle {
+    left: 200px;
+    width: 90px;
+    height: 90px;
+    top: 130px;
+  }
+}
+.burger-menu .burger-colored-overlay .burger-girl-bottom {
+  position: absolute;
+  bottom: 50px;
+  left: 165px;
+  z-index: 3;
+  width: 132px;
+  height: 220px;
+  background-image: url(../../../public/main-hero2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 599px) {
+  .burger-menu .burger-colored-overlay .burger-girl-bottom {
+    bottom: 210px;
+    left: 200px;
+    height: 140px;
+    width: 84px;
+  }
 }
 
 .header {
@@ -66,113 +175,6 @@ body {
   background-image: url(../../../public/logo.svg);
   background-repeat: no-repeat;
   margin-top: 8px;
-}
-.header .container .burger-menu {
-  max-width: 650px;
-  width: 100%;
-  height: 600px;
-  background-color: #000;
-  position: absolute;
-  top: 0;
-  left: -651px;
-  transition: all 0.5s;
-}
-.header .container .burger-menu.is-active {
-  left: 0;
-}
-.header .container .burger-menu .burger-logo-wrapper {
-  width: 140px;
-  height: 30px;
-}
-.header .container .burger-menu .burger-logo-wrapper .burger-logo {
-  display: block;
-  width: 140px;
-  height: 30px;
-  background-image: url(../../../public/logo-burger.svg);
-  background-repeat: no-repeat;
-  margin-top: 30px;
-  margin-left: 35px;
-}
-.header .container .burger-menu .close-btn {
-  background-image: url(../../../public/close-btn.svg);
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 20;
-}
-.header .container .burger-menu .burger-nav {
-  display: flex;
-  margin-top: 15px;
-}
-.header .container .burger-menu .burger-nav .burger-item {
-  list-style: none;
-  margin-bottom: 25px;
-}
-.header .container .burger-menu .burger-nav .burger-item a {
-  color: #FFF;
-  text-decoration: none;
-}
-.header .container .burger-menu .burger-nav .burger-item a.is-active {
-  color: #6E9C9F;
-}
-.header .container .burger-menu .burger-colored-overlay .burger-girl-main {
-  position: absolute;
-  top: 120px;
-  left: 250px;
-  z-index: 2;
-  width: 300px;
-  height: 400px;
-  background-image: url(../../../public/main-hero1.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-@media screen and (max-width: 599px) {
-  .header .container .burger-menu .burger-colored-overlay .burger-girl-main {
-    width: 200px;
-    height: 200px;
-    left: 40px;
-    top: 270px;
-  }
-}
-.header .container .burger-menu .burger-colored-overlay .burger-girl-middle {
-  position: absolute;
-  top: 181px;
-  right: 36px;
-  z-index: 3;
-  width: 150px;
-  height: 150px;
-  background-image: url(../../../public/main-hero3.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-@media screen and (max-width: 599px) {
-  .header .container .burger-menu .burger-colored-overlay .burger-girl-middle {
-    left: 200px;
-    width: 90px;
-    height: 90px;
-    top: 130px;
-  }
-}
-.header .container .burger-menu .burger-colored-overlay .burger-girl-bottom {
-  position: absolute;
-  bottom: 50px;
-  left: 165px;
-  z-index: 3;
-  width: 132px;
-  height: 220px;
-  background-image: url(../../../public/main-hero2.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-@media screen and (max-width: 599px) {
-  .header .container .burger-menu .burger-colored-overlay .burger-girl-bottom {
-    bottom: 210px;
-    left: 200px;
-    height: 140px;
-    width: 84px;
-  }
 }
 @media screen and (max-width: 999px) {
   .header .container .navsection {
@@ -238,6 +240,12 @@ body {
   background-image: url(../../../public/burger.png);
   background-repeat: no-repeat;
   background-size: contain;
+  display: none;
+}
+@media screen and (max-width: 999px) {
+  .header .container .burger-btn {
+    display: block;
+  }
 }
 
 .footer {
