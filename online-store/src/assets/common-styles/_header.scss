@@ -1,5 +1,111 @@
 @import './vars';
 
+.burger-menu {
+    max-width: 650px;
+    width: 100%;
+    height: 600px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: -651px;
+    transition: all 0.5s;
+    z-index: 7;
+    &.is-active {
+        left: 0;
+    }
+
+    .burger-logo-wrapper {
+        width: 140px;
+        height: 30px;
+        .burger-logo {
+            display: block;
+            width: 140px;
+            height: 30px;
+            background-image: url(../../../public/logo-burger.svg);
+            background-repeat: no-repeat;
+            margin-top: 30px;
+            margin-left: 35px;
+        }
+    }
+    .close-btn {
+        background-image: url(../../../public/close-btn.svg);
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 20;
+    }
+    .burger-nav {
+        display: flex;
+        margin-top: 15px;
+        .burger-item {
+            list-style: none;
+            margin-bottom: 25px;
+            & a {
+                color: #FFF;
+                text-decoration: none;
+                &.is-active {
+                    color: $green-hover;
+                }
+            }
+        }
+    }
+    .burger-colored-overlay {
+        .burger-girl-main {
+            position: absolute;
+            top: 120px;
+            left: 250px;
+            z-index: 2;
+            width: 300px;
+            height: 400px;
+            background-image: url(../../../public/main-hero1.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            @media screen and (max-width: 599px) {
+                width: 200px;
+                height: 200px;
+                left: 40px;
+                top: 270px;
+            }
+        }
+        .burger-girl-middle {
+            position: absolute;
+            top: 181px;
+            right: 36px;
+            z-index: 3;
+            width: 150px;
+            height: 150px;
+            background-image: url(../../../public/main-hero3.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            @media screen and (max-width: 599px) {
+                left: 200px;
+                width: 90px;
+                height: 90px;
+                top: 130px;
+            }
+        }
+        .burger-girl-bottom {
+            position: absolute;
+            bottom: 50px;
+            left: 165px;
+            z-index: 3;
+            width: 132px;
+            height: 220px;
+            background-image: url(../../../public/main-hero2.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            @media screen and (max-width: 599px) {
+                bottom: 210px;
+                left: 200px;
+                height: 140px;
+                width: 84px;
+            }
+        }
+    }
+}
+
 .header {
     padding-top: 25px;
     padding-bottom: 15px;
@@ -20,110 +126,6 @@
             margin-top: 8px;
         }
 
-        .burger-menu {
-            max-width: 650px;
-            width: 100%;
-            height: 600px;
-            background-color: #000;
-            position: absolute;
-            top: 0;
-            left: -651px;
-            transition: all 0.5s;
-            &.is-active {
-                left: 0;
-            }
-
-            .burger-logo-wrapper {
-                width: 140px;
-                height: 30px;
-                .burger-logo {
-                    display: block;
-                    width: 140px;
-                    height: 30px;
-                    background-image: url(../../../public/logo-burger.svg);
-                    background-repeat: no-repeat;
-                    margin-top: 30px;
-                    margin-left: 35px;
-                }
-            }
-            .close-btn {
-                background-image: url(../../../public/close-btn.svg);
-                width: 70px;
-                height: 70px;
-                position: absolute;
-                top: 15px;
-                right: 15px;
-                z-index: 20;
-            }
-            .burger-nav {
-                display: flex;
-                margin-top: 15px;
-                .burger-item {
-                    list-style: none;
-                    margin-bottom: 25px;
-                    & a {
-                        color: #FFF;
-                        text-decoration: none;
-                        &.is-active {
-                            color: $green-hover;
-                        }
-                    }
-                }
-            }
-            .burger-colored-overlay {
-                .burger-girl-main {
-                    position: absolute;
-                    top: 120px;
-                    left: 250px;
-                    z-index: 2;
-                    width: 300px;
-                    height: 400px;
-                    background-image: url(../../../public/main-hero1.jpg);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    @media screen and (max-width: 599px) {
-                        width: 200px;
-                        height: 200px;
-                        left: 40px;
-                        top: 270px;
-                    }
-                }
-                .burger-girl-middle {
-                    position: absolute;
-                    top: 181px;
-                    right: 36px;
-                    z-index: 3;
-                    width: 150px;
-                    height: 150px;
-                    background-image: url(../../../public/main-hero3.jpg);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    @media screen and (max-width: 599px) {
-                        left: 200px;
-                        width: 90px;
-                        height: 90px;
-                        top: 130px;
-                    }
-                }
-                .burger-girl-bottom {
-                    position: absolute;
-                    bottom: 50px;
-                    left: 165px;
-                    z-index: 3;
-                    width: 132px;
-                    height: 220px;
-                    background-image: url(../../../public/main-hero2.jpg);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    @media screen and (max-width: 599px) {
-                        bottom: 210px;
-                        left: 200px;
-                        height: 140px;
-                        width: 84px;
-                    }
-                }
-            }
-        }
 
         .navsection {
             @media screen and (max-width: 999px) {
