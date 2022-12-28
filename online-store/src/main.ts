@@ -1,6 +1,6 @@
-import database, { Data, IData } from '../public/database/database';
-import '../public/ts/burger';
-import { Card } from '../public/ts/card_create';
+import database, {Data, IData} from './assets/ts/database';
+import './assets/ts/burger'
+import {Card} from './assets/ts/card_create';
 
 let cardsToPage = 3;
 let cardsWrapper = (<Node>document.querySelector('.gallery-wrapper'));
