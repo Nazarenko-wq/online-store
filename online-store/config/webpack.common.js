@@ -6,7 +6,16 @@ const paths = require('./paths')
 
 module.exports = {
   // Where webpack looks to start building the bundle
-  entry: [paths.src + '/index.ts', paths.public + '/shop_page/index.ts'],
+  entry: [
+    paths.src + '/index.ts', 
+    paths.src + '/assets/ts/shop.ts', 
+    paths.src + '/assets/ts/burger.ts', 
+    paths.src + '/assets/ts/card_create.ts',
+    paths.src + '/assets/ts/cart.ts',
+    paths.src + '/assets/ts/checkout.ts',
+    paths.src + '/assets/ts/database.ts',
+    paths.src + '/assets/ts/item.ts',
+],
 
   // Where webpack outputs the assets and bundles
   output: {
@@ -41,6 +50,36 @@ module.exports = {
       favicon: paths.src + '/assets/images/favicon.png',
       template: paths.src + '/index.html', // template file
       filename: 'index.html', // output file
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Online Store',
+      favicon: paths.src + '/assets/images/favicon.png',
+      template: paths.src + '/cart.html', // template file
+      filename: 'cart.html', // output file
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Online Store',
+      favicon: paths.src + '/assets/images/favicon.png',
+      template: paths.src + '/checkout.html', // template file
+      filename: 'checkout.html', // output file
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Online Store',
+      favicon: paths.src + '/assets/images/favicon.png',
+      template: paths.src + '/item.html', // template file
+      filename: 'item.html', // output file
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Online Store',
+      favicon: paths.src + '/assets/images/favicon.png',
+      template: paths.src + '/shop.html', // template file
+      filename: 'shop.html', // output file
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Online Store',
+      favicon: paths.src + '/assets/images/favicon.png',
+      template: paths.src + '/not_found.html', // template file
+      filename: 'not_found.html', // output file
     }),
   ],
 

@@ -9,33 +9,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!--Connect local style -->
-    <link href="./style.css" rel="stylesheet">
 
-    <title>Cart</title>
+    <title>Item</title>
 </head>
 <body>
-     <!--HEADER SECTION-->
-     <header class="header">
+    <!--HEADER SECTION-->
+    <header class="header">
         <div class="container">
             <a href="./index.html" class="logo"></a>
             <nav class="navsection">
                 <ul class="list-bar">
                     <li class="list-item">
-                        <a class="is-active" href="../../index.html">Главная</a>
+                        <a class="is-active" href="./index.html">Главная</a>
                     </li>
                     <li class="list-item">
-                        <a href="">Магазин</a>
+                        <a href="../shop_page/index.html">Магазин</a>
                     </li>
                     <li class="list-item">
-                        <a href="">О бренде</a>
+                        <a href="#">О бренде</a>
                     </li>
                 </ul>
             </nav>
             <div class="cart-phone">
                 <a href="tel:+375291234657" class="phone">+375291234567</a>
-                <a href="./cart_page/index.html" class="cart-image"></a>
+                <a href="./cart.html" class="cart-image"></a>
             </div>
         </div>
     </header>
@@ -43,51 +40,86 @@
     <main class="main">
         <div class="container">
             <div class="title">
-                <h2>Корзина</h2>
+                <h2>Свитшот Sweet Shot</h2>
                 <div class="path">
                     <span class="main-page"><a href="../../index.html">Главная</a></span>
                     <span class="space">-></span>
-                    <span class="current-item active"><a href="#">Корзина</a></span>
-                </div>
-            </div>
-            <div class="cart-content">
-                <div class="thead">
-                    <div class="content-header under-line">Товар</div>
-                    <div class="items under-line">Цена</div>
-                    <div class="under-line">Кол-во</div>
-                    <div class="under-line">Всего</div>
-                </div>
-                <div class="td">
-                    <div class="product">
-                        <img class="close-icon" src="../../public/close_icon.svg" alt="close">
-                        <div class="product-img">
-                            <img src="../../public/card_item2.jpg" alt="image">
-                        </div>
-                        <div class="discription">
-                            Футболка USA
-                        </div>
-                    </div>
-                    <div class="price">$129</div>
-                    <div class="quantity">
-                        <div class="wrap-quantity">1</div>
-                    </div>
-                    <div class="result">$129</div>
-                </div>
-            </div>
-            <div class="order-block">
-                <div class="order-wriper">
-                    <div class="order-title">Подытог: <span class="res">$129</span></div>
-                    <div class="place-order-block">
-                        <div class="total">
-                            Итого: <span class="total-res">$129</span>
-                        </div>
-                        <a href="../checkout/index.html">
-                            <button class="total-btn">Оформить заказ</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                    <span class="kinds"><a href="#">Свитшоты</a></span>
+                    <span class="space">-></span>
+                    <span class="current-item active"><a href="#">Свитшот Sweet Shot</a></span>
 
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="item-detailes">
+                    <div class="item-img">
+                        <img src="../../public/card_item1.jpg" alt="image">
+                    </div>
+                    <div class="item-discriptions">
+                        <div class="price">
+                            <p>$311</p>
+                        </div>
+                        <div class="sizes-block">
+                            <h3 class="size-title">
+                                Выберете размер
+                            </h3>
+                            <div class="sizes">
+                                <div class="size">S</div>
+                                <div class="size active-size">M</div>
+                                <div class="size">L</div>
+                                <div class="size">XL</div>
+                                <div class="size">XXL</div>
+                            </div>
+                        </div>
+                        <div class="collor-block">
+                            <h3 class="collor-title">
+                                Выберете цвет
+                            </h3>
+                            <div class="collors">
+                                <div class="color color1"></div>
+                                <div class="color color2 active-color"></div>
+                                <div class="color color3"></div>
+                                <div class="color color4"></div>
+                            </div>
+                        </div>
+                        <div class="addit-block">
+                            <div class="quantity">1</div>
+                            <button class="add-btn">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="related-products">
+                    <h3 class="frame-title">
+                        Связанные товары
+                    </h3>
+                    <div class="products">
+                        <div class="card">
+                            <figure class="card-img">
+                                <img src="../../public/card_item2.jpg" alt="image">
+                                <figcaption><img src="../../public/arrow.svg" alt="arrow"></figcaption>
+                            </figure>
+                            <div class="card-discription">
+                                <h4>Футболка USA</h4>
+                                <div class="card-price">
+                                    $129
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <figure class="card-img">
+                                <img src="../../public/card_item3.jpg" alt="image">
+                                <figcaption><img src="../../public/arrow.svg" alt="arrow"></figcaption>
+                            </figure>
+                            <div class="card-discription">
+                                <h4>Купальник Glow</h4>
+                                <div class="card-price">
+                                    $129
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     
@@ -147,6 +179,5 @@
         </div>
     </footer>
 
-    <script src="./index.ts"></script>
 </body>
 </html>

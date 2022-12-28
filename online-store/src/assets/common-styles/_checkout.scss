@@ -1,4 +1,4 @@
-@import '../../src/assets/common-styles/common.scss';
+@import './vars';
 
 %form-teamplate {
     h3 {
@@ -170,9 +170,9 @@
                         background-size: 50% 50%;
                         }
 
-                        .custom-checkbox:checked+label::before {
-                            background-image: url(../../public/blackSquare.jpg);
-                        }
+                        // .custom-checkbox:checked+label::before {
+                        //     background-image: url(../../public/blackSquare.jpg);
+                        // }
                     }
 
                     .total-btn {

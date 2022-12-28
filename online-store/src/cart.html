@@ -8,58 +8,22 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- STYLES -->
-    <link rel="stylesheet" href="style.css">
-
-    <title>Not found</title>
-
+    <title>Cart</title>
 </head>
 <body>
-    <!-- Burger Menu -->
-    <div class="burger-menu">
-        <div class="burger-logo-wrapper">
-            <a href="../../index.html" class="burger-logo"></a>
-        </div>
-        <nav class="burger-nav">
-            <ul>
-                <li class="burger-item">
-                    <a href="../../index.html">Главная</a>
-                </li>
-                <li class="burger-item">
-                    <a class="is-active" href="../shop_page/index.html">Магазин</a>
-                </li>
-                <li class="burger-item">
-                    <a href="">О бренде</a>
-                </li>
-                <li class="burger-item">
-                    <a href="tel:+375291234657" class="phone">+375291234567</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="close-btn"></div>
-        <div class="burger-colored-overlay">
-            <div class="burger-girl-main"></div>
-            <div class="burger-girl-middle"></div>
-            <div class="burger-girl-bottom"></div>
-        </div>
-    </div>
-    <!-- Burger menu end -->
-
-    <div class="overlay"></div>
-
-    <!--HEADER SECTION-->
-    <header class="header">
+     <!--HEADER SECTION-->
+     <header class="header">
         <div class="container">
-            <a href="../../index.html" class="logo"></a>
+            <a href="./index.html" class="logo"></a>
             <nav class="navsection">
                 <ul class="list-bar">
                     <li class="list-item">
-                        <a href="../../index.html">Главная</a>
+                        <a class="is-active" href="./index.html">Главная</a>
                     </li>
                     <li class="list-item">
-                        <a class="is-active" href="../shop_page/index.html">Магазин</a>
+                        <a href="">Магазин</a>
                     </li>
                     <li class="list-item">
                         <a href="">О бренде</a>
@@ -68,27 +32,62 @@
             </nav>
             <div class="cart-phone">
                 <a href="tel:+375291234657" class="phone">+375291234567</a>
-                <a href="./assets/cart_page/index.html" class="cart-image"></a>
+                <a href="./cart.html" class="cart-image"></a>
             </div>
-            <div class="burger-btn"></div>
         </div>
     </header>
 
-    <!-- MAIN SECTION -->
     <main class="main">
         <div class="container">
-            <div class="err-wrapper">
-                <span class="err-number">404</span>
-                <h1 class="h1">Страница не найдена</h1>
-                <span class="err-text">
-                    Неправильно набран адрес или такая страница больше не существует
-                </span>
-                <a href="../../index.html" class="button">Вернуться на главную</a>
+            <div class="title">
+                <h2>Корзина</h2>
+                <div class="path">
+                    <span class="main-page"><a href="../../index.html">Главная</a></span>
+                    <span class="space">-></span>
+                    <span class="current-item active"><a href="#">Корзина</a></span>
+                </div>
             </div>
-            <img src="./not-found_background.jpg" alt="Bender cries" class="bender">
+            <div class="cart-content">
+                <div class="thead">
+                    <div class="content-header under-line">Товар</div>
+                    <div class="items under-line">Цена</div>
+                    <div class="under-line">Кол-во</div>
+                    <div class="under-line">Всего</div>
+                </div>
+                <div class="td">
+                    <div class="product">
+                        <img class="close-icon" src="../../public/close_icon.svg" alt="close">
+                        <div class="product-img">
+                            <img src="../../public/card_item2.jpg" alt="image">
+                        </div>
+                        <div class="discription">
+                            Футболка USA
+                        </div>
+                    </div>
+                    <div class="price">$129</div>
+                    <div class="quantity">
+                        <div class="wrap-quantity">1</div>
+                    </div>
+                    <div class="result">$129</div>
+                </div>
+            </div>
+            <div class="order-block">
+                <div class="order-wriper">
+                    <div class="order-title">Подытог: <span class="res">$129</span></div>
+                    <div class="place-order-block">
+                        <div class="total">
+                            Итого: <span class="total-res">$129</span>
+                        </div>
+                        <a href="./checkout.html">
+                            <button class="total-btn">Оформить заказ</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
-
+    
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
@@ -97,10 +96,10 @@
                 <nav class="navsection">
                     <ul class="list-bar">
                         <li class="list-item">
-                            <a href="">Главная</a>
+                            <a class="is-active" href="">Главная</a>
                         </li>
                         <li class="list-item">
-                            <a class="is-active" href="">Магазин</a>
+                            <a href="">Магазин</a>
                         </li>
                         <li class="list-item">
                             <a href="">О бренде</a>
@@ -144,6 +143,7 @@
             </div>
         </div>
     </footer>
-    
+
+    <script src="./assets/ts/cart.ts"></script>
 </body>
 </html>
