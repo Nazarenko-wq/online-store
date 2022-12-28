@@ -1,0 +1,1 @@
+import '../public/item_detales/item';
