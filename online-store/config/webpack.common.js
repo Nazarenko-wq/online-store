@@ -6,7 +6,7 @@ const paths = require('./paths')
 
 module.exports = {
   // Where webpack looks to start building the bundle
-  entry: [paths.src + '/index.ts', paths.public + '/shop_page/index.ts'],
+  entry: [paths.src + '/index.ts', paths.src + '/assets/ts/shop.ts'],
 
   // Where webpack outputs the assets and bundles
   output: {
