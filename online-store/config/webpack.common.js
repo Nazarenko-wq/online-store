@@ -42,6 +42,24 @@ module.exports = {
       template: paths.src + '/index.html', // template file
       filename: 'index.html', // output file
     }),
+    new HtmlWebpackPlugin({
+      title: 'Online Store',
+      favicon: paths.src + '/assets/images/favicon.png',
+      template: paths.src + '/cart.html', // template file
+      filename: 'cart.html', // output file
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Online Store',
+      favicon: paths.src + '/assets/images/favicon.png',
+      template: paths.src + '/checkout.html', // template file
+      filename: 'checkout.html', // output file
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Online Store',
+      favicon: paths.src + '/assets/images/favicon.png',
+      template: paths.src + '/item.html', // template file
+      filename: 'item.html', // output file
+    }),
   ],
 
   // Determine how modules within the project are treated
