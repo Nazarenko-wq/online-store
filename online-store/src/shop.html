@@ -71,10 +71,12 @@
             <div class="burger-btn"></div>
         </div>
     </header>
-    
     <!-- MAIN SECTION -->
     <main class="main">
         <div class="container">
+            <!-- <div class="backgound-girl">
+                <img src="./public/database/white_shoes1.jpg" alt="123">
+            </div> -->
             <!-- title -->
             <section class="title">
                 <h2 class="h2">Магазин</h2>
@@ -85,8 +87,62 @@
                 </div>
             </section>
 
-            <section class="gallery-wrapper">
-                <div class="gallery-item">
+            <div class="filter">
+                <span>Фильтр:</span>
+                <form>
+                    <div class="filter-category">
+                        <span class="filter-item">Категория</span>
+                        <div class="options-block">
+                            <div>
+                                <input class="category-input" type="checkbox" name="category" id="hat">
+                                <label for="hat">Шляпы</label>
+                            </div>
+                            <div>
+                                <input class="category-input" type="checkbox" name="category" id="shirt">
+                                <label for="shirt">Рубашки</label>
+                            </div>
+                            <div>
+                                <input class="category-input" type="checkbox" name="category" id="jacket">
+                                <label for="jacket">Верхняя Одежда</label>
+                            </div>
+                            <div>
+                                <input class="category-input" type="checkbox" name="category" id="dress">
+                                <label for="dress">Платья</label>
+                            </div>
+                            <div>
+                                <input class="category-input" type="checkbox" name="category" id="shoes">
+                                <label for="shoes">Обувь</label>
+                            </div>
+                            <div>
+                                <input class="category-input" type="checkbox" name="category" id="tshirt">
+                                <label for="tshirt">Майки и боди</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="filter-price">
+                        <span class="filter-item">Цена</span>
+                        <div class="options-block">
+                            <div class="price-input">
+                                <div class="field">
+                                    <span>Мин.</span>
+                                    <input type="number" class="input-min" value="50">
+                                </div>
+                                <div class="separator">-</div>
+                                <div class="field">
+                                    <span>Макс.</span>
+                                    <input type="number" class="input-max" value="150" max="750">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="submit-filter" type="button">Применить</button>
+                    <button class="reset-btn" type="reset">Сбросить</button>
+                </form>
+            </div>
+
+            <section class="gallery-wrapper gallery-page">
+                <!-- <div class="gallery-item">
                     <div class="item-image">
                         <img src="../../public/card_item1.jpg">
                     </div>
@@ -174,7 +230,7 @@
                         <div class="item-name">Футболка USA</div>
                         <div class="item-price">$129</div>
                     </div>
-                </div>
+                </div> -->
             </section>
         </div>
     </main>
