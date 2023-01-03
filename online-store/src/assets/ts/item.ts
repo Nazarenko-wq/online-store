@@ -2,20 +2,20 @@ import database from './database'
 
 (function(){
     // Get all gallery items
-let items = document.querySelectorAll('[data-id]');
+    let items = document.querySelectorAll('[data-id]');
 
-// Get current item ID & go to item page 
-items.forEach(elem => {
-    elem.addEventListener('click', function(e) {
-        
-        localStorage.setItem('currentItemId', `${elem.attributes[1].nodeValue}`);
-        let target = e.target as HTMLDivElement;
-        
-        if(target.classList.contains('item-image')) {
-            window.location.href = './item.html';
-        } 
+    // Get current item ID & go to item page 
+    items.forEach(elem => {
+        elem.addEventListener('click', function(e) {
+            
+            localStorage.setItem('currentItemId', `${elem.attributes[1].nodeValue}`);
+            let target = e.target as HTMLDivElement;
+            
+            if(target.classList.contains('item-image')) {
+                window.location.href = './item.html';
+            } 
+        })
     })
-})
 })();
 
 // Get item data
@@ -28,13 +28,15 @@ items.forEach(elem => {
     let itemPrice = document.querySelector('.cust') as HTMLParagraphElement;
     let itemName = document.querySelector('.current-item') as HTMLSpanElement;
     let itemKind = document.querySelector('.kinds') as HTMLSpanElement;
-    
+    let discription = document.querySelector('.discription') as HTMLDivElement;
+
     database.forEach(elem => {
         if(elem.id === num) {
             itemImg.src = elem.photo[0];
             itemPrice.textContent = elem.price;
             itemName.textContent = elem.name;
             itemKind.textContent = elem.category;
+            discription.textContent = elem.description;
         }
     })
 })();
@@ -64,7 +66,7 @@ items.forEach(elem => {
     })
 })();
 
-// Choose the color
+// // Choose the color
 (function(){
     let parent = document.querySelector('.colors') as HTMLDivElement;
 
@@ -90,10 +92,11 @@ items.forEach(elem => {
 })();
 
 
-// Push to lockal storage quantity goods
+// // Push to lockal storage quantity goods
 (function(){
     let input = document.querySelector('.quantity') as HTMLInputElement;
     localStorage.setItem('currentQuantity', `${input.value}`);
+    // console.log(localStorage.getItem('currentQuantity'));
     
     input.addEventListener('change', () => {
         
@@ -103,6 +106,7 @@ items.forEach(elem => {
     })
 })();
 
-// add btn listener
+
+// // add btn listener
 let btn = document.querySelector('.add-btn') as HTMLButtonElement;
 btn.addEventListener('click', () => {window.location.href = './cart.html'});
