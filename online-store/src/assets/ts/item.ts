@@ -1,5 +1,23 @@
 import database from './database'
 
+interface IObj {
+    id: string,
+    name: string,
+    price: string,
+    photo: string
+};
+
+type exemple = IObj;
+
+let arr: exemple[] = [];
+let str = JSON.stringify(arr);
+
+if(localStorage.getItem('arrItems') === null) {
+    localStorage.setItem('arrItems',str);
+};
+// localStorage.clear();
+// console.log(localStorage.getItem('arrItems'));
+
 (function(){
     // Get all gallery items
     let items = document.querySelectorAll('[data-id]');
@@ -19,23 +37,26 @@ import database from './database'
 })();
 
 if(window.location.href === 'http://localhost:8080/item.html') {
+
+    let itemImg = document.querySelector('.itemImg') as HTMLImageElement;
+    let itemPrice = document.querySelector('.cust') as HTMLParagraphElement;
+    let item = document.querySelector('.item-name') as HTMLDivElement;
+    let itemName = document.querySelector('.current-item') as HTMLSpanElement;
+    let itemKind = document.querySelector('.kinds') as HTMLSpanElement;
+    let discription = document.querySelector('.discription') as HTMLDivElement;
+
     // Get item data
     (function(){
         const id = localStorage.getItem('currentItemId');
         let num = Number(id);
         // console.log(num);
 
-        let itemImg = document.querySelector('.itemImg') as HTMLImageElement;
-        let itemPrice = document.querySelector('.cust') as HTMLParagraphElement;
-        let itemName = document.querySelector('.current-item') as HTMLSpanElement;
-        let itemKind = document.querySelector('.kinds') as HTMLSpanElement;
-        let discription = document.querySelector('.discription') as HTMLDivElement;
-
         database.forEach(elem => {
             if(elem.id === num) {
                 itemImg.src = elem.photo[0];
                 itemPrice.textContent = elem.price;
                 itemName.textContent = elem.name;
+                item.textContent = elem.name;
                 itemKind.textContent = elem.category;
                 discription.textContent = elem.description;
             }
@@ -91,24 +112,38 @@ if(window.location.href === 'http://localhost:8080/item.html') {
             // console.log(localStorage.getItem('currentColor'));
         })
     })();
-
-
-    // // Push to lockal storage quantity goods
-    (function(){
-        let input = document.querySelector('.quantity') as HTMLInputElement;
-        localStorage.setItem('currentQuantity', `${input.value}`);
-        // console.log(localStorage.getItem('currentQuantity'));
-        
-        input.addEventListener('change', () => {
-            
-            localStorage.setItem('currentQuantity', `${input.value}`);
-            
-            // console.log(localStorage.getItem('currentQuantity'));
-        })
-    })();
-
-
-    // // add btn listener
+    
+    let cartCount = document.querySelector('.count') as HTMLSpanElement;
     let btn = document.querySelector('.add-btn') as HTMLButtonElement;
-    btn.addEventListener('click', () => {window.location.href = './cart.html'});
+
+    window.onload = function () {
+        cartCount.textContent = localStorage.getItem('currentQuantity');
+    }
+
+    btn.addEventListener('click', function addItemToCart() {
+        // count quantity if items
+        localStorage.setItem('currentQuantity', `${cartCount.textContent}`);
+        let currentQuantity = localStorage.getItem('currentQuantity');
+        let num = Number(currentQuantity) + 1;
+        cartCount.textContent = String(num);
+        localStorage.setItem('currentQuantity', String(num));
+       
+        // create object
+        let obj = {
+            id: localStorage.getItem('currentItemId'),
+            name: item.textContent,
+            price: itemPrice.textContent,
+            photo: itemImg.src
+        }
+
+        // push object to local storage
+        let itemArr = localStorage.getItem('arrItems');
+        let arr2 = Array.from(JSON.parse(itemArr!)); 
+        // let arr2 = JSON.parse(itemArr!);
+        arr2.push(obj);
+        let str = JSON.stringify(arr2);
+        localStorage.setItem('arrItems', str);
+    });
 }
+
+// localStorage.clear();

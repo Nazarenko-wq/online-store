@@ -1,4 +1,12 @@
-@import './vars';
+%text {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
 
 %active-size {
     background-color: #000000;
@@ -56,6 +64,15 @@
                             width: 100%;
                             height: auto;
                         }
+                    }
+                    .item-name {
+                        @extend %text;
+                        text-align: center;
+                    }
+
+                    .discription {
+                        @extend %text;
+                        font-size: 16px;
                     }
                 }
 
