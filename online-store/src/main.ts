@@ -9,11 +9,11 @@ let cardsWrapper = (<Element>document.querySelector('.gallery-wrapper'));
 
 function renderAfterFilter(): void {
     let localStorageCards = localStorage.getItem('filterCards');
-    let localStorageCardsObj = JSON.parse(localStorageCards!);
+    let localStorageCardsObj: string[] = JSON.parse(localStorageCards!);
     let localStoragePrices = localStorage.getItem('filterCardsPrices');
-    let localStoragePricesObj = JSON.parse(localStoragePrices!);
+    let localStoragePricesObj: string[] = JSON.parse(localStoragePrices!);
     let localStorageInputs = localStorage.getItem('filterCardsInputs');
-    let localStorageInputsObj = JSON.parse(localStorageInputs!);
+    let localStorageInputsObj: string[] = JSON.parse(localStorageInputs!);
 
     cardsToPage = localStorageCardsObj.length;
     filterResult.innerText = `Найдено товаров: ${cardsToPage}.`;
@@ -67,13 +67,7 @@ export function renderImages(cardsDatabase: IData[]) {
     }
 }
 
-
-for (let i = 0; i < cardsToPage!; i++) {
-    let random: number = randoms.pop() as number;
-    let databaseElem = database[random];
-    let item = new Card(databaseElem.id, databaseElem.category, databaseElem.name, databaseElem.description, databaseElem.price, databaseElem.photo);
-    cardsWrapper.appendChild(item.init());
-}
+renderImages(databaseCopy);
 
 (function(){
     let cartCount = document.querySelector('.count') as HTMLSpanElement;
@@ -82,6 +76,3 @@ for (let i = 0; i < cardsToPage!; i++) {
         cartCount.textContent = localStorage.getItem('currentQuantity');
     }
 })();
-
-renderImages(databaseCopy);
-
