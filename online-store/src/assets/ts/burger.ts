@@ -3,6 +3,7 @@ let burgerBtn = (<HTMLTemplateElement>document.querySelector('.burger-btn'));
 let closeBurgerBtn = (<HTMLTemplateElement>document.querySelector('.close-btn'));
 let overlay = (<HTMLTemplateElement>document.querySelector('.overlay'));
 
+
 burgerBtn.addEventListener('click', () => {
     burgerMenu.classList.add('is-active');
     overlay.classList.add('is-active');

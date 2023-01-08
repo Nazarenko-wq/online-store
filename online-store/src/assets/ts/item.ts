@@ -1,4 +1,5 @@
-import database from './database'
+import { Card } from './card_create';
+import database, { IData } from './database'
 
 interface IObj {
     id: string,
@@ -18,6 +19,18 @@ if(localStorage.getItem('arrItems') === null) {
 // localStorage.clear();
 // console.log(localStorage.getItem('arrItems'));
 
+let relatedGoodsWrapper = (<HTMLElement>document.querySelector('.cards-related'));
+
+function renderToRelatedGoods(databaseRelated: IData[], wrapper: HTMLElement) {
+    const cardsToPage = 2;
+    const shuffledArray = databaseRelated.sort((_: unknown, __: unknown) => 0.5 - Math.random());
+    for (let i = 0; i < cardsToPage!; i++) {
+        let oneItem = shuffledArray[i];
+        let item = new Card(oneItem.id, oneItem.category, oneItem.name, oneItem.description, oneItem.price, oneItem.photo);
+        wrapper.appendChild(item.init());
+    }
+}
+
 (function(){
     // Get all gallery items
     let items = document.querySelectorAll('[data-id]');
@@ -27,6 +40,7 @@ if(localStorage.getItem('arrItems') === null) {
         elem.addEventListener('click', function(e) {
             
             localStorage.setItem('currentItemId', `${elem.attributes[1].nodeValue}`);
+            // localStorage.setItem('currentItemCategory', )
             let target = e.target as HTMLDivElement;
             
             if(target.classList.contains('item-image')) {
@@ -144,6 +158,33 @@ if(window.location.href === 'http://localhost:8080/item.html') {
         let str = JSON.stringify(arr2);
         localStorage.setItem('arrItems', str);
     });
+
+    let relatedGoodsArray: IData[] = [];
+    database.forEach(el => {
+        if (el.category === itemKind.textContent) {
+            relatedGoodsArray.push(el);
+        }
+    });
+    renderToRelatedGoods(relatedGoodsArray, relatedGoodsWrapper);
 }
 
+let oneClickBtn = document.getElementById('one-click-purchase');
+let oneClickPopup = document.querySelector('.popup-oneclick_purchase');
+let cancelBtn = document.querySelector('.cancel');
+let popupOverlay = document.querySelector('.popup-overlay');
+
+oneClickBtn?.addEventListener('click', () => {
+    oneClickPopup!.classList.add('is-activated');
+    popupOverlay!.classList.add('is-active');
+});
+
+cancelBtn?.addEventListener('click', () => {
+    popupOverlay!.classList.remove('is-active');
+    oneClickPopup!.classList.remove('is-activated');
+});
+
+popupOverlay?.addEventListener('click', () => {
+    popupOverlay!.classList.remove('is-active');
+    oneClickPopup!.classList.remove('is-activated');
+});
 // localStorage.clear();
