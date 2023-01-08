@@ -79,7 +79,7 @@
             </div> -->
             <!-- title -->
             <section class="title">
-                <h2 class="h2">Магазин</h2>
+                <h2 class="h2" id="shop-title">Магазин</h2>
                 <div class="path">
                     <span class="main-page"><a href="./index.html">Главная</a></span>
                     <span class="space">-></span>
@@ -94,30 +94,34 @@
                         <span class="filter-item">Категория</span>
                         <div class="options-block">
                             <div>
-                                <input class="category-input" type="checkbox" name="category" id="hat">
+                                <input class="category-input" value="Шляпы" type="checkbox" name="category" id="hat">
                                 <label for="hat">Шляпы</label>
                             </div>
                             <div>
-                                <input class="category-input" type="checkbox" name="category" id="shirt">
+                                <input class="category-input" value="Рубашки" type="checkbox" name="category" id="shirt">
                                 <label for="shirt">Рубашки</label>
                             </div>
                             <div>
-                                <input class="category-input" type="checkbox" name="category" id="jacket">
+                                <input class="category-input" value="Верхняя одежда" type="checkbox" name="category" id="jacket">
                                 <label for="jacket">Верхняя Одежда</label>
                             </div>
                             <div>
-                                <input class="category-input" type="checkbox" name="category" id="dress">
+                                <input class="category-input" value="Платья" type="checkbox" name="category" id="dress">
                                 <label for="dress">Платья</label>
                             </div>
                             <div>
-                                <input class="category-input" type="checkbox" name="category" id="shoes">
+                                <input class="category-input" value="Обувь" type="checkbox" name="category" id="shoes">
                                 <label for="shoes">Обувь</label>
                             </div>
                             <div>
-                                <input class="category-input" type="checkbox" name="category" id="tshirt">
+                                <input class="category-input" value="Майки и боди" type="checkbox" name="category" id="tshirt">
                                 <label for="tshirt">Майки и боди</label>
                             </div>
-                            
+                            <div>
+                                <input class="category-input" value="Шорты" type="checkbox" name="category" id="shorts">
+                                <label for="shorts">Шорты</label>
+                            </div>
+                            <a href="javascript:void(0);" class="button">Закрыть</a>
                         </div>
                     </div>
                     <div class="filter-price">
@@ -126,20 +130,23 @@
                             <div class="price-input">
                                 <div class="field">
                                     <span>Мин.</span>
-                                    <input type="number" class="input-min" value="50">
+                                    <input type="number" class="input-min" placeholder="0" min="0" max="750">
                                 </div>
                                 <div class="separator">-</div>
                                 <div class="field">
                                     <span>Макс.</span>
-                                    <input type="number" class="input-max" value="150" max="750">
+                                    <input type="number" class="input-max" placeholder="750" min="0" max="750">
                                 </div>
                             </div>
+                            <a href="javascript:void(0);" class="button">Закрыть</a>
                         </div>
                     </div>
                     <button class="submit-filter" type="button">Применить</button>
                     <button class="reset-btn" type="reset">Сбросить</button>
                 </form>
             </div>
+            
+            <div class="filter-result"></div>
 
             <section class="gallery-wrapper gallery-page">
                 <!-- <div class="gallery-item">

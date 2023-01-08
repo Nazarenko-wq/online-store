@@ -1,7 +1,7 @@
 const database: Data = [
     {
         id: 1,
-        category: 'Головные уборы',
+        category: 'Шляпы',
         name: 'Шляпа Gangster',
         description: 'Почувствуйте себя настоящим гангстером со шляпой Gangster, которая в точности передает стиль того времени.',
         price: '$85',
@@ -210,7 +210,7 @@ const database: Data = [
     },
     {
         id: 20,
-        category: 'Майки',
+        category: 'Майки и боди',
         name: 'Майка Sunrise',
         description: 'Та самая майка, для той самой...',
         price: '$103',
