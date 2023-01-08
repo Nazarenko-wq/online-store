@@ -13,6 +13,39 @@
     <title>Checkout</title>
 </head>
 <body>
+    <!-- Burger Menu -->
+    <div class="burger-menu">
+        <div class="burger-logo-wrapper">
+            <a href="./index.html" class="burger-logo"></a>
+        </div>
+        <nav class="burger-nav">
+            <ul>
+                <li class="burger-item">
+                    <a href="./index.html">Главная</a>
+                </li>
+                <li class="burger-item">
+                    <a class="is-active" href="./shop.html">Магазин</a>
+                </li>
+                <li class="burger-item">
+                    <a href="">О бренде</a>
+                </li>
+                <li class="burger-item">
+                    <a href="tel:+375291234657" class="phone">+375291234567</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="close-btn"></div>
+        <div class="burger-colored-overlay">
+            <div class="burger-girl-main"></div>
+            <div class="burger-girl-middle"></div>
+            <div class="burger-girl-bottom"></div>
+        </div>
+    </div>
+    <!-- Burger menu end -->
+
+    <div class="overlay"></div>
+
+
     <!--HEADER SECTION-->
     <header class="header">
         <div class="container">
@@ -23,7 +56,7 @@
                         <a class="is-active" href="./index.html">Главная</a>
                     </li>
                     <li class="list-item">
-                        <a href="">Магазин</a>
+                        <a href="./shop.html">Магазин</a>
                     </li>
                     <li class="list-item">
                         <a href="">О бренде</a>
@@ -32,8 +65,9 @@
             </nav>
             <div class="cart-phone">
                 <a href="tel:+375291234657" class="phone">+375291234567</a>
-                <a href="./cart.html" class="cart-image"><span class="count"></span></a>
+                <a href="#" class="cart-image"><span class="count"></span></a>
             </div>
+            <div class="burger-btn"></div>
         </div>
     </header>
 
@@ -95,7 +129,7 @@
                             <input type="checkbox" class="custom-checkbox" name="pay" id="cash">
                             <label for="cash">Оплата наличными</label>
                         </form>
-                        <button class="total-btn">Разместить заказ</button>
+                        <button class="checkout-btn">Разместить заказ</button>
                     </div>
                 </div>
             </div>
