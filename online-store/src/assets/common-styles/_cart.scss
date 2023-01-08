@@ -59,6 +59,7 @@
                         justify-content: center;
                         align-items: center;
                         border: 1px solid #AFAFAF;
+                        text-align: center;
                     }
                 }
             }
@@ -148,13 +149,15 @@
                     grid-template-columns: 40% 20% 20% 20%;
                 }
 
-                .td {
-                    grid-template-columns: 40% 20% 20% 20%;
-
-                    .product {
-                        flex-direction: column;
-
-                        
+                .cart-items {
+                    .td {
+                        grid-template-columns: 40% 20% 20% 20%;
+    
+                        .product {
+                            flex-direction: column;
+    
+                            
+                        }
                     }
                 }
             }
@@ -174,4 +177,8 @@
             }
         }
     }
+}
+
+.del {
+    display: none;
 }

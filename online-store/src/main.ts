@@ -67,4 +67,21 @@ export function renderImages(cardsDatabase: IData[]) {
     }
 }
 
+
+for (let i = 0; i < cardsToPage!; i++) {
+    let random: number = randoms.pop() as number;
+    let databaseElem = database[random];
+    let item = new Card(databaseElem.id, databaseElem.category, databaseElem.name, databaseElem.description, databaseElem.price, databaseElem.photo);
+    cardsWrapper.appendChild(item.init());
+}
+
+(function(){
+    let cartCount = document.querySelector('.count') as HTMLSpanElement;
+
+    window.onload = function () {
+        cartCount.textContent = localStorage.getItem('currentQuantity');
+    }
+})();
+
 renderImages(databaseCopy);
+

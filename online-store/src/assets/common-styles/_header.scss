@@ -176,6 +176,17 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 margin-left: 85px;
+                position: relative;
+
+                span {
+                    position: absolute;
+                    right: 30px;
+                    top: 2px;
+                    color: red;
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+                
                 @media screen and (max-width: 599px) {
                     margin-left: 20px;
                 }
