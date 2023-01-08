@@ -7,7 +7,7 @@ interface IObj {
     photo: string
 };
 
-type exemple = IObj;
+export type exemple = IObj;
 
 let arr: exemple[] = [];
 let str = JSON.stringify(arr);

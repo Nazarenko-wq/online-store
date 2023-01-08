@@ -1,34 +1,7 @@
-import database from './database';
+import { exemple } from "./item";
 
 if(window.location.href === 'http://localhost:8080/cart.html'){
-    (function(){
-        // let cartItemImg = document.querySelector('.cartImg') as HTMLImageElement;
-        // let cartItemName = document.querySelector('.discription') as HTMLDivElement;
-        // let cartItemPrice = document.querySelector('.price') as HTMLDivElement;
-        // let cartItemQuantity = document.querySelector('.wrap-quantity') as HTMLInputElement;
-        // let cartItemResult = document.querySelector('.result') as HTMLDivElement;
-        // let itemQuantity = document.querySelector('.quantity') as HTMLInputElement;
-    
-        
-        // let id = Number(localStorage.getItem('currentItemId'));
-        // let currentQuantity = localStorage.getItem('currentQuantity');
-        // database.forEach(elem => {
-        //     if(elem.id === id) {
-        //         cartItemImg.src = elem.photo[0];
-        //         cartItemName.textContent = elem.name;
-        //         cartItemPrice.textContent = elem.price;
-        //         // cartItemQuantity.value = currentQuantity!;
-        //         cartItemResult.textContent = cartItemPrice.textContent;
-
-        //         let priceNatural = parseInt(elem.price.replace('$', ''));
-        //         cartItemQuantity.addEventListener('change', () => {
-        //             let str = String(priceNatural * Number(cartItemQuantity.value));
-        //             cartItemResult.textContent = '$' + str;
-        //         })
-        //     }
-        // })
-    })();
-    
+   
     // Show cart quantity
     (function(){
         let cartCount = document.querySelector('.count') as HTMLSpanElement;
@@ -48,18 +21,38 @@ if(window.location.href === 'http://localhost:8080/cart.html'){
 
         function createElements (num: number) {
 
-            for(let i = 0; i < num; i++) {
+            for(let i:number = 0; i < num; i++) {
                 let td = document.createElement('div');
                 td.classList.add('td');
                 td.id = arr[i].id;
                 itemsParent.appendChild(td);
                 td.addEventListener('click', e => {
-                    let target = e.target as HTMLImageElement;
+                    let cartText = document.querySelector('.count') as HTMLSpanElement;
+                    let target = e.target as Element;
                     if(target.classList.contains('close-icon')) {
                         target.parentElement?.parentElement?.classList.remove('td');
                         target.parentElement?.parentElement?.classList.add('del');
+                        let newDigit = Number(cartText.textContent) - 1;
+                        cartText.textContent = String(newDigit);
+                        localStorage.setItem('currentQuantity', `${newDigit}`);
+
+                        let str = localStorage.getItem('arrItems')!;
+                        let arr: exemple[] = Array.from(JSON.parse(str));
+                        
+                        // target.parentElement?.parentElement?.id
+
+                        for(let i = 0; i < arr.length; i++) {
+                            // console.log(arr[i].id);
+                            // console.log(target.parentElement?.parentElement?.id);
+                            if(arr[i].id === target.parentElement?.parentElement?.id) {
+                                arr.splice(i, 1);
+                            }
+                        }
+
+
+                        localStorage.setItem('arrItems', JSON.stringify(arr));
                     }
-                    console.log(td);
+                    
                 })
 
             let product = document.createElement('div');
@@ -115,7 +108,7 @@ if(window.location.href === 'http://localhost:8080/cart.html'){
             
         }
 
-        createElements(2);
+        createElements(itemsLength);
         // console.log(typeof itemsLength);
     })();
 }
