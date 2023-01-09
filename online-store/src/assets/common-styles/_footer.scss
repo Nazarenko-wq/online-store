@@ -165,5 +165,28 @@
                 }
             }
         }
+        .authors {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: -50px;
+            @media screen and (max-width: 599px) {
+                margin-bottom: 0;
+            }
+            .about-authors {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .rsschool {
+                img {
+                    width: 100px;
+                }
+            }
+        }
     }
 }
