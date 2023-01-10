@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+
+    <title>Shop Store</title>
+</head>
+<body>
+    <!-- Burger Menu -->
+    <div class="burger-menu">
+        <div class="burger-logo-wrapper">
+            <a href="./index.html" class="burger-logo"></a>
+        </div>
+        <nav class="burger-nav">
+            <ul>
+                <li class="burger-item">
+                    <a href="./index.html">Главная</a>
+                </li>
+                <li class="burger-item">
+                    <a class="is-active" href="./shop.html">Магазин</a>
+                </li>
+                <li class="burger-item">
+                    <a href="tel:+375291234657" class="phone">+375291234567</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="close-btn"></div>
+        <div class="burger-colored-overlay">
+            <div class="burger-girl-main"></div>
+            <div class="burger-girl-middle"></div>
+            <div class="burger-girl-bottom"></div>
+        </div>
+    </div>
+    <!-- Burger menu end -->
+
+    <div class="overlay"></div>
+
+    <!--HEADER SECTION-->
+    <header class="header">
+        <div class="container">
+            <a href="./index.html" class="logo"></a>
+
+
+            <nav class="navsection">
+                <ul class="list-bar">
+                    <li class="list-item">
+                        <a href="./index.html">Главная</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="is-active" href="./shop.html">Магазин</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="cart-phone">
+                <a href="tel:+375291234657" class="phone">+375291234567</a>
+                <a href="./cart.html" class="cart-image"><span class="count"></span></a>
+            </div>
+            <div class="burger-btn"></div>
+        </div>
+    </header>
+    <!-- MAIN SECTION -->
+    <main class="main">
+        <div class="container">
+            <!-- <div class="backgound-girl">
+                <img src="./public/database/white_shoes1.jpg" alt="123">
+            </div> -->
+            <!-- title -->
+            <section class="title">
+                <h2 class="h2" id="shop-title">Магазин</h2>
+                <div class="path">
+                    <span class="main-page"><a href="./index.html">Главная</a></span>
+                    <span class="space">-></span>
+                    <span class="current-item active"><a href="#">Магазин</a></span>
+                </div>
+            </section>
+
+            <div class="filter">
+                <span>Фильтр:</span>
+                <form>
+                    <div class="filter-category">
+                        <span class="filter-item">Категория</span>
+                        <div class="options-block">
+                            <div>
+                                <input class="category-input" value="Шляпы" type="checkbox" name="category" id="hat">
+                                <label for="hat">Шляпы</label>
+                            </div>
+                            <div>
+                                <input class="category-input" value="Рубашки" type="checkbox" name="category" id="shirt">
+                                <label for="shirt">Рубашки</label>
+                            </div>
+                            <div>
+                                <input class="category-input" value="Верхняя одежда" type="checkbox" name="category" id="jacket">
+                                <label for="jacket">Верхняя Одежда</label>
+                            </div>
+                            <div>
+                                <input class="category-input" value="Платья" type="checkbox" name="category" id="dress">
+                                <label for="dress">Платья</label>
+                            </div>
+                            <div>
+                                <input class="category-input" value="Обувь" type="checkbox" name="category" id="shoes">
+                                <label for="shoes">Обувь</label>
+                            </div>
+                            <div>
+                                <input class="category-input" value="Майки и боди" type="checkbox" name="category" id="tshirt">
+                                <label for="tshirt">Майки и боди</label>
+                            </div>
+                            <div>
+                                <input class="category-input" value="Шорты" type="checkbox" name="category" id="shorts">
+                                <label for="shorts">Шорты</label>
+                            </div>
+                            <a href="javascript:void(0);" class="button">Закрыть</a>
+                        </div>
+                    </div>
+                    <div class="filter-price">
+                        <span class="filter-item">Цена</span>
+                        <div class="options-block">
+                            <div class="price-input">
+                                <div class="field">
+                                    <span>Мин.</span>
+                                    <input type="number" class="input-min" placeholder="0" min="0" max="750">
+                                </div>
+                                <div class="separator">-</div>
+                                <div class="field">
+                                    <span>Макс.</span>
+                                    <input type="number" class="input-max" placeholder="750" min="0" max="750">
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="button">Закрыть</a>
+                        </div>
+                    </div>
+                    <button class="submit-filter" type="button">Применить</button>
+                    <button class="reset-btn" type="reset">Сбросить</button>
+                </form>
+            </div>
+            
+            <div class="filter-result"></div>
+
+            <section class="gallery-wrapper gallery-page"></section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="upper_block">
+                <a href="./index.html" class="logo"></a>
+                <nav class="navsection">
+                    <ul class="list-bar">
+                        <li class="list-item">
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="is-active" href="">Магазин</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="cart-phone">
+                    <a href="tel:+375291234567" class="phone">+375291234567</a>
+                    <a href="mailto:example@email.com" class="e-mail">example@email.com</a>
+                </div>
+            </div>
+            <div class="down_block">
+                <div class="wrapper-left">
+                    <div class="left-side">
+                        <p>&copy;Все Права защищены</p>
+                        <p>Политика конфиденциальности</p>
+                        <p>Публичная оферта</p>
+                    </div>
+                    <div class="right-side">
+                        <ul class="footer-list">
+                            <li class="list-item__footer">Пальто</li>
+                            <li class="list-item__footer">Свитшоты</li>
+                            <li class="list-item__footer">Кардиганы</li>
+                            <li class="list-item__footer">Толстовки</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrapper-right">
+                    <div class="social-networks">
+                        <a href="https://www.instagram.com
+                        " class="instagram"></a>
+                        <a href="https://www.facebook.com
+                        " class="facebook"></a>
+                        <a href="https://twitter.com" class="twitter"></a>
+                    </div>
+                    <div class="payment">
+                        <div class="visa"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="authors">
+                <div class="about-authors">
+                    <div class="mikhail">
+                        <a href="https://github.com/Nazarenko-wq" class="mikhail-link">
+                            <img title="Mihail Nazarenko" src="../public/github.png" alt="Mikhail Nazarenko Github Link">
+                        </a>
+                    </div>
+                    <span>&</span>
+                    <div class="maksim">
+                        <a href="https://github.com/Slimmzzz">
+                            <img title="Maksim Khotsin" src="../public/github.png" alt="Maksim Khotsin Github">
+                        </a>
+                    </div>
+                </div>
+                <div class="year">&copy;2023</div>
+                <div class="rsschool">
+                    <a href="https://rs.school/js/">
+                        <img src="../public/rs_school_js.svg" alt="RSSchool Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

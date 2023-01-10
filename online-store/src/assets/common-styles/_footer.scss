@@ -1,0 +1,192 @@
+@import './vars';
+
+.footer {
+    background: $footer-color;
+    .container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width: 599px) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .upper_block {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            @media screen and (max-width: 599px) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .logo {
+                width: 140px;
+                height: 30px;
+                background-image: url(../../../public/logo.svg);
+                background-repeat: no-repeat;
+                margin-top: 8px;
+                @media screen and (max-width: 599px) {
+                    margin-bottom: 20px;
+                }
+            }
+            .navsection {
+                .list-bar {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    .list-item {
+                        list-style: none;
+                        @media screen and (max-width: 599px) {
+                            margin-bottom: 20px;
+                        }
+                        &:hover {
+                            transform: scale(1.02);
+                            transition: all 0.2s;
+                        }
+                        & a {
+                            text-decoration: none;
+                            margin-right: 75px;
+                            @media screen and (max-width: 999px) {
+                                margin-right: 20px;
+                            }
+                            &:hover {
+                                color: $green-hover;
+                            }
+                            &.is-active {
+                                color: $green-hover;
+                            }
+                        }
+                    }
+                }
+            }
+            .cart-phone {
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                .phone {
+                    text-decoration: none;
+                    color: #000;
+                    &:hover {
+                        transform: scale(1.02);
+                        transition: all 0.2s;
+                    }
+                }
+                .e-mail {
+                    margin-top: 10px;
+                    color: #000;
+                    text-decoration: none;
+                    &:hover {
+                        transform: scale(1.02);
+                        transition: all 0.2s;
+                    }
+                }
+            }
+        }
+        .down_block {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 50px;
+            @media screen and (max-width: 599px) {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .wrapper-left {
+                display: flex;
+                max-width: 560px;
+                width: 100%;
+                justify-content: space-between;
+                @media screen and (max-width: 599px) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-right: 40px;
+                }
+                .left-side p {
+                    margin: 10px;
+                }
+                .right-side {
+                    @media screen and (max-width: 599px) {
+                        margin-bottom: 30px;
+                    }
+                    .footer-list {
+                        margin: 0;
+                        margin-top: 10px;
+                        .list-item__footer {
+                            list-style: none;
+                            margin-top: 6px;
+                        }
+                    }
+                }
+            }
+            .wrapper-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                @media screen and (max-width: 599px) {
+                    justify-content: center;
+                }
+                .social-networks {
+                    width: 100px;
+                    height: 25px;
+                    display: flex;
+                    .instagram {
+                        display: block;
+                        width: 25px;
+                        height: 25px;
+                        background-image: url(../../../public/footer-instagram.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        margin-right: 12px;
+                    }
+                    .facebook {
+                        display: block;
+                        width: 25px;
+                        height: 25px;
+                        background-image: url(../../../public/footer-facebook.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        margin-right: 12px;
+                    }
+                    .twitter {
+                        display: block;
+                        width: 25px;
+                        height: 25px;
+                        background-image: url(../../../public/footer-twitter.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+                .payment > .visa {
+                    width: 70px;
+                    height: 24px;
+                    background-image: url(../../../public/visa-mastercard.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        .authors {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: -50px;
+            @media screen and (max-width: 599px) {
+                margin-bottom: 0;
+            }
+            .about-authors {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .rsschool {
+                img {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
